@@ -1,4 +1,6 @@
-# 🎨 CSS Animation Playgrounds
+# Intro to CSS Animations Lab
+
+![CSS Animation Playgrounds](assets/intro_animation_header.png)
 
 Welcome to your first adventure with CSS animations! In this lab, you'll explore 7 different "playgrounds" where you'll learn to bring websites to life with movement, color changes, and visual effects.
 
@@ -26,11 +28,15 @@ By the end of this lab, you'll know how to:
 - Focus: `@keyframes`, `animation` property, `transform: translateY()`
 - Time: ~20 minutes
 
+<img src="assets/intro_animation_ball.png" alt="Bouncing Ball Playground" width="200">
+
 ### Playground 2: The Fading Ghost 👻
 **What you'll learn**: Opacity animations and complex shapes
 - File: `css/playground-2-fading-ghost.css`  
 - Focus: `opacity` animations, CSS shapes, positioning
 - Time: ~20 minutes
+
+<img src="assets/intro_animation_ghost.png" alt="Ghost Playground" width="200">
 
 ### Playground 3: The Growing Flower 🌸
 **What you'll learn**: Scale transformations and animation delays
@@ -38,11 +44,15 @@ By the end of this lab, you'll know how to:
 - Focus: `transform: scale()`, `animation-delay`, coordinated timing
 - Time: ~25 minutes
 
+<img src="assets/intro_animation_flower.png" alt="Growing Flower Playground" width="200">
+
 ### Playground 4: The Color-Changing Chameleon 🦎
 **What you'll learn**: Color animations and multi-part elements
 - File: `css/playground-4-color-changing-chameleon.css`
 - Focus: `background-color` animations, color transitions
 - Time: ~25 minutes
+
+<img src="assets/intro_animation_chameleon.png" alt="Chameleon Playground" width="200">
 
 ### Playground 5: The Spinning Wheel ⚙️
 **What you'll learn**: Rotation animations and infinite loops
@@ -50,17 +60,23 @@ By the end of this lab, you'll know how to:
 - Focus: `transform: rotate()`, infinite animations, linear timing
 - Time: ~20 minutes
 
+<img src="assets/intro_animation_wheel.png" alt="Spinning Wheel Playground" width="200">
+
 ### Playground 6: The Glowing Button ✨
 **What you'll learn**: Visual effects with shadows and filters
 - File: `css/playground-6-glowing-button.css`
 - Focus: `box-shadow`, `filter: brightness()`, interactive effects
 - Time: ~25 minutes
 
+<img src="assets/intro_animation_button.png" alt="Glowing Button Playground" width="200">
+
 ### Playground 7: The Dancing Squares 💃
 **What you'll learn**: Complex multi-element coordination
 - File: `css/playground-7-dancing-squares.css`
 - Focus: Multiple animations, delays, choreographed effects
 - Time: ~30 minutes
+
+<img src="assets/intro_animation_dance.png" alt="Dancing Squares Playground" width="200">
 
 ## 📝 How to Work Through Each Playground
 
@@ -157,6 +173,6 @@ Remember: every professional web developer started exactly where you are now. Ke
 
 ---
 
-**Time Estimate**: 3 hours total (including breaks and experimentation)
-**Difficulty**: Beginner-friendly with guided practice
+**Time Estimate**: 3 hours total (including breaks and experimentation)  
+**Difficulty**: Beginner-friendly with guided practice  
 **Prerequisites**: Basic CSS knowledge (selectors, properties, values)
