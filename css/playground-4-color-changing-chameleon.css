@@ -1,0 +1,224 @@
+/* ===================================================
+   PLAYGROUND 4: THE COLOR-CHANGING CHAMELEON
+   ===================================================
+   
+   Welcome to the magical world of color animations! You'll
+   create a chameleon that changes colors like magic.
+   
+   🎯 LEARNING GOALS:
+   - Animate background-color property
+   - Work with multiple colors in keyframes
+   - Create animal shapes with CSS
+   - Coordinate different body part animations
+   
+   ================================================= */
+
+/* STEP 1: Position the whole chameleon */
+.color-changing-chameleon {
+    position: relative;
+    width: 250px;
+    height: 150px;
+}
+
+/* STEP 2: Create the chameleon head */
+.chameleon-head {
+    position: absolute;
+    top: 30px;
+    right: 20px;
+    width: 60px;
+    height: 50px;
+    background: #4a7c59;
+    border-radius: 30px 30px 15px 15px;
+    
+    /* TODO #1: Make the head change colors */
+    /* animation: color-shift 4s ease-in-out infinite; */
+}
+
+/* Add an eye to the head */
+.chameleon-head::after {
+    content: '';
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    width: 8px;
+    height: 8px;
+    background: #333;
+    border-radius: 50%;
+}
+
+/* STEP 3: Create the main body */
+.chameleon-body {
+    position: absolute;
+    top: 40px;
+    left: 50px;
+    width: 120px;
+    height: 40px;
+    background: #4a7c59;
+    border-radius: 20px;
+    
+    /* TODO #2: Make the body change colors too, but with a delay */
+    /* animation: color-shift 4s ease-in-out infinite 0.5s; */
+}
+
+/* STEP 4: Create the curved tail */
+.chameleon-tail {
+    position: absolute;
+    top: 45px;
+    left: 10px;
+    width: 50px;
+    height: 30px;
+    background: #4a7c59;
+    border-radius: 25px 25px 25px 0;
+    transform: rotate(-30deg);
+    
+    /* TODO #3: Make the tail change colors with another delay */
+    /* animation: color-shift 4s ease-in-out infinite 1s; */
+}
+
+/* STEP 5: Create the legs */
+.chameleon-legs {
+    position: absolute;
+    top: 70px;
+    left: 60px;
+    width: 100px;
+    height: 20px;
+}
+
+.leg {
+    position: absolute;
+    width: 12px;
+    height: 25px;
+    background: #4a7c59;
+    border-radius: 6px;
+    
+    /* TODO #4: Make the legs change colors too */
+    /* animation: color-shift 4s ease-in-out infinite; */
+}
+
+.leg-1 {
+    left: 10px;
+    /* TODO #5: Add delay for leg 1 - try 1.5s */
+    /* animation-delay: 1.5s; */
+}
+
+.leg-2 {
+    left: 30px;
+    /* TODO #6: Add delay for leg 2 - try 2s */
+    /* animation-delay: 2s; */
+}
+
+.leg-3 {
+    left: 50px;
+    /* TODO #7: Add delay for leg 3 - try 2.5s */
+    /* animation-delay: 2.5s; */
+}
+
+.leg-4 {
+    left: 70px;
+    /* TODO #8: Add delay for leg 4 - try 3s */
+    /* animation-delay: 3s; */
+}
+
+/* STEP 6: The color-changing animation */
+@keyframes color-shift {
+    0% {
+        background-color: #4a7c59; /* Forest green */
+    }
+    
+    /* TODO #9: Add a color at 25% - try #e74c3c (red) */
+    25% {
+        background-color: /* YOUR COLOR HERE */;
+    }
+    
+    /* TODO #10: Add a color at 50% - try #f39c12 (orange) */
+    50% {
+        background-color: /* YOUR COLOR HERE */;
+    }
+    
+    /* TODO #11: Add a color at 75% - try #3498db (blue) */
+    75% {
+        background-color: /* YOUR COLOR HERE */;
+    }
+    
+    100% {
+        background-color: #4a7c59; /* Back to forest green */
+    }
+}
+
+/* UNDERSTANDING COLOR ANIMATIONS:
+   ===============================
+   
+   CSS can smoothly transition between colors by calculating
+   the values in between. This works with:
+   
+   - background-color
+   - color (text color)
+   - border-color
+   - box-shadow colors
+   
+   Color formats that work:
+   - Hex: #ff0000, #f00
+   - RGB: rgb(255, 0, 0)
+   - HSL: hsl(0, 100%, 50%)
+   - Named colors: red, blue, green
+*/
+
+/* STEP 7: Bonus animations you can try */
+
+/* TODO #12: Create a rainbow effect */
+/*
+@keyframes rainbow {
+    0% { background-color: #ff0000; }    // Red
+    16% { background-color: #ff8000; }   // Orange  
+    33% { background-color: #ffff00; }   // Yellow
+    50% { background-color: #00ff00; }   // Green
+    66% { background-color: #0080ff; }   // Blue
+    83% { background-color: #8000ff; }   // Purple
+    100% { background-color: #ff0000; }  // Back to red
+}
+*/
+
+/* TODO #13: Create a breathing effect */
+/*
+@keyframes breathe {
+    0%, 100% { 
+        background-color: #4a7c59;
+        transform: scale(1);
+    }
+    50% { 
+        background-color: #7fb069;
+        transform: scale(1.1);
+    }
+}
+*/
+
+/* EXPERIMENT ZONE:
+   ================
+   
+   TODO #14: Try different timing functions
+   - ease-in: slow start
+   - ease-out: slow end  
+   - linear: constant speed
+   - cubic-bezier(0.68, -0.55, 0.265, 1.55): bouncy!
+   
+   TODO #15: Create a mood chameleon
+   Can you make it cycle through colors that represent emotions?
+   - Red for angry
+   - Blue for sad
+   - Yellow for happy
+   - Green for calm
+   
+   TODO #16: Add blinking eyes
+   Can you make the eye (the ::after element) blink?
+   Hint: Use opacity animation on the ::after pseudo-element!
+   
+   REAL-WORLD USES:
+   ================
+   Color animations are used for:
+   - Button hover effects
+   - Progress indicators
+   - Status changes (error → success)
+   - Brand color transitions
+   - Loading animations
+   - Alert notifications
+*/

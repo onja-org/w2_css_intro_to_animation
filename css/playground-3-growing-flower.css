@@ -1,0 +1,199 @@
+/* ===================================================
+   PLAYGROUND 3: THE GROWING FLOWER
+   ===================================================
+   
+   Time to learn about scale transformations! You'll create
+   a flower that blooms before your eyes using transform: scale().
+   
+   🎯 LEARNING GOALS:
+   - Use transform: scale() for size changes
+   - Coordinate multiple animations
+   - Practice animation delays
+   - Create complex shapes with positioning
+   
+   ================================================= */
+
+/* STEP 1: Position the whole flower */
+.growing-flower {
+    position: relative;
+    width: 200px;
+    height: 200px;
+}
+
+/* STEP 2: Create the stem */
+.stem {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 8px;
+    height: 80px;
+    background: linear-gradient(to top, #2d5016, #4a7c0a);
+    border-radius: 4px;
+    
+    /* TODO #1: Uncomment to make the stem grow from the ground */
+    /* animation: grow-up 2s ease-out; */
+}
+
+/* STEP 3: Position the flower head */
+.flower-head {
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 120px;
+    height: 120px;
+}
+
+/* STEP 4: Style the center of the flower */
+.center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 30px;
+    height: 30px;
+    background: radial-gradient(circle, #ffd700, #ffaa00);
+    border-radius: 50%;
+    z-index: 10; /* Make sure it appears on top of petals */
+    
+    /* TODO #2: Make the center appear after the petals */
+    /* animation: bloom 1s ease-out 2.5s both; */
+}
+
+/* STEP 5: Create the petals */
+.petal {
+    position: absolute;
+    width: 40px;
+    height: 60px;
+    background: linear-gradient(to top, #ff6b9d, #ffc3e6);
+    border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+    transform-origin: center bottom; /* Petals grow from their base */
+    
+    /* TODO #3: Uncomment the petal animation */
+    /* animation: bloom 1s ease-out both; */
+}
+
+/* Position each petal around the center */
+.petal-1 {
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%) rotate(0deg);
+    /* TODO #4: Add animation delay - try 0.5s */
+    /* animation-delay: 0.5s; */
+}
+
+.petal-2 {
+    top: 15px;
+    right: 5px;
+    transform: rotate(60deg);
+    /* TODO #5: Add animation delay - try 0.7s */
+    /* animation-delay: 0.7s; */
+}
+
+.petal-3 {
+    bottom: 15px;
+    right: 5px;
+    transform: rotate(120deg);
+    /* TODO #6: Add animation delay - try 0.9s */
+    /* animation-delay: 0.9s; */
+}
+
+.petal-4 {
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%) rotate(180deg);
+    /* TODO #7: Add animation delay - try 1.1s */
+    /* animation-delay: 1.1s; */
+}
+
+.petal-5 {
+    bottom: 15px;
+    left: 5px;
+    transform: rotate(240deg);
+    /* TODO #8: Add animation delay - try 1.3s */
+    /* animation-delay: 1.3s; */
+}
+
+.petal-6 {
+    top: 15px;
+    left: 5px;
+    transform: rotate(300deg);
+    /* TODO #9: Add animation delay - try 1.5s */
+    /* animation-delay: 1.5s; */
+}
+
+/* STEP 6: The growing animations */
+
+/* Stem grows upward */
+@keyframes grow-up {
+    from {
+        height: 0;
+    }
+    to {
+        height: 80px;
+    }
+}
+
+/* Petals and center bloom by scaling up */
+@keyframes bloom {
+    from {
+        /* TODO #10: Start with scale 0 (invisible) */
+        transform: scale(/* YOUR CODE HERE */) rotate(var(--rotation, 0deg));
+        opacity: 0;
+    }
+    to {
+        /* TODO #11: End with scale 1 (normal size) */
+        transform: scale(/* YOUR CODE HERE */) rotate(var(--rotation, 0deg));
+        opacity: 1;
+    }
+}
+
+/* UNDERSTANDING SCALE:
+   ====================
+   
+   transform: scale() changes the size of elements:
+   - scale(0) = invisible (0% of original size)
+   - scale(0.5) = half size
+   - scale(1) = normal size  
+   - scale(2) = double size
+   
+   You can also scale X and Y separately:
+   - scaleX(2) = double width only
+   - scaleY(0.5) = half height only
+   - scale(1.5, 0.8) = 1.5x width, 0.8x height
+*/
+
+/* UNDERSTANDING ANIMATION DELAYS:
+   ===============================
+   
+   animation-delay controls when an animation starts:
+   - 0s = starts immediately
+   - 1s = waits 1 second before starting
+   - 0.5s = waits half a second
+   
+   The 'both' keyword in 'animation: bloom 1s ease-out both' means:
+   - Apply the 'from' styles before the animation starts
+   - Keep the 'to' styles after the animation ends
+   
+   This prevents elements from flickering!
+*/
+
+/* EXPERIMENT ZONE:
+   ================
+   
+   TODO #12: Try different bloom timing
+   Make some petals bloom faster or slower by changing the duration
+   
+   TODO #13: Create a color-changing flower
+   Can you make the petals change color as they grow?
+   Hint: Add color changes to the bloom keyframes!
+   
+   TODO #14: Add a swaying effect
+   Can you make the whole flower sway gently in the breeze?
+   Hint: Create a new animation with transform: rotate()
+   
+   BONUS CHALLENGE:
+   Can you make the flower close and reopen?
+   Try using 'infinite' and scaling back down!
+*/

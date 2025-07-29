@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Animation Playgrounds</title>
+    
+    <!-- Import CSS files for each playground -->
+    <link rel="stylesheet" href="css/playground-1-bouncing-ball.css">
+    <link rel="stylesheet" href="css/playground-2-fading-ghost.css">
+    <link rel="stylesheet" href="css/playground-3-growing-flower.css">
+    <link rel="stylesheet" href="css/playground-4-color-changing-chameleon.css">
+    <link rel="stylesheet" href="css/playground-5-spinning-wheel.css">
+    <link rel="stylesheet" href="css/playground-6-glowing-button.css">
+    <link rel="stylesheet" href="css/playground-7-dancing-squares.css">
+    
+    <style>
+        /* General page styles */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        h1 {
+            text-align: center;
+            color: white;
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        .playground {
+            background: white;
+            border-radius: 15px;
+            margin: 2rem 0;
+            padding: 2rem;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+        
+        .playground h2 {
+            color: #333;
+            border-bottom: 3px solid #667eea;
+            padding-bottom: 0.5rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .playground-description {
+            background: #f8f9ff;
+            padding: 1rem;
+            border-left: 4px solid #667eea;
+            margin-bottom: 2rem;
+            border-radius: 4px;
+        }
+        
+        .animation-area {
+            background: #f0f4f8;
+            border: 2px solid #e2e8f0;
+            border-radius: 10px;
+            padding: 3rem;
+            text-align: center;
+            margin: 2rem 0;
+            min-height: 200px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🎨 CSS Animation Playgrounds</h1>
+        
+        <!-- Playground 1: Bouncing Ball -->
+        <section class="playground" id="playground-1">
+            <h2>Playground 1: The Bouncing Ball</h2>
+            <div class="playground-description">
+                <p><strong>What we're learning:</strong> Basic keyframe animations and the transform property</p>
+                <p><strong>Your mission:</strong> Make a ball bounce up and down using CSS animations!</p>
+            </div>
+            
+            <div class="animation-area">
+                <div class="bouncing-ball"></div>
+            </div>
+        </section>
+        
+        <!-- Playground 2: Fading Ghost -->
+        <section class="playground" id="playground-2">
+            <h2>Playground 2: The Fading Ghost</h2>
+            <div class="playground-description">
+                <p><strong>What we're learning:</strong> Opacity animations for fade effects</p>
+                <p><strong>Your mission:</strong> Make a ghost appear and disappear mysteriously!</p>
+            </div>
+            
+            <div class="animation-area">
+                <div class="fading-ghost">
+                    <div class="ghost-body"></div>
+                    <div class="ghost-eyes">
+                        <div class="eye eye-left"></div>
+                        <div class="eye eye-right"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Playground 3: Growing Flower -->
+        <section class="playground" id="playground-3">
+            <h2>Playground 3: The Growing Flower</h2>
+            <div class="playground-description">
+                <p><strong>What we're learning:</strong> Scale transformations and shape changes</p>
+                <p><strong>Your mission:</strong> Watch a flower bloom and grow before your eyes!</p>
+            </div>
+            
+            <div class="animation-area">
+                <div class="growing-flower">
+                    <div class="stem"></div>
+                    <div class="flower-head">
+                        <div class="center"></div>
+                        <div class="petal petal-1"></div>
+                        <div class="petal petal-2"></div>
+                        <div class="petal petal-3"></div>
+                        <div class="petal petal-4"></div>
+                        <div class="petal petal-5"></div>
+                        <div class="petal petal-6"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Playground 4: Color-Changing Chameleon -->
+        <section class="playground" id="playground-4">
+            <h2>Playground 4: The Color-Changing Chameleon</h2>
+            <div class="playground-description">
+                <p><strong>What we're learning:</strong> Color animations and background changes</p>
+                <p><strong>Your mission:</strong> Create a chameleon that changes colors like magic!</p>
+            </div>
+            
+            <div class="animation-area">
+                <div class="color-changing-chameleon">
+                    <div class="chameleon-head"></div>
+                    <div class="chameleon-body"></div>
+                    <div class="chameleon-tail"></div>
+                    <div class="chameleon-legs">
+                        <div class="leg leg-1"></div>
+                        <div class="leg leg-2"></div>
+                        <div class="leg leg-3"></div>
+                        <div class="leg leg-4"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Playground 5: Spinning Wheel -->
+        <section class="playground" id="playground-5">
+            <h2>Playground 5: The Spinning Wheel</h2>
+            <div class="playground-description">
+                <p><strong>What we're learning:</strong> Rotation animations and infinite loops</p>
+                <p><strong>Your mission:</strong> Make a colorful wheel spin round and round!</p>
+            </div>
+            
+            <div class="animation-area">
+                <div class="spinning-wheel">
+                    <div class="wheel-center"></div>
+                    <div class="spoke spoke-1"></div>
+                    <div class="spoke spoke-2"></div>
+                    <div class="spoke spoke-3"></div>
+                    <div class="spoke spoke-4"></div>
+                    <div class="spoke spoke-5"></div>
+                    <div class="spoke spoke-6"></div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Playground 6: Glowing Button -->
+        <section class="playground" id="playground-6">
+            <h2>Playground 6: The Glowing Button</h2>
+            <div class="playground-description">
+                <p><strong>What we're learning:</strong> Box-shadow and filter effects</p>
+                <p><strong>Your mission:</strong> Create a button that glows and pulses with energy!</p>
+            </div>
+            
+            <div class="animation-area">
+                <button class="glowing-button">Click Me!</button>
+            </div>
+        </section>
+        
+        <!-- Playground 7: Dancing Squares -->
+        <section class="playground" id="playground-7">
+            <h2>Playground 7: The Dancing Squares</h2>
+            <div class="playground-description">
+                <p><strong>What we're learning:</strong> Coordinating multiple animations with delays</p>
+                <p><strong>Your mission:</strong> Make a group of squares dance together in harmony!</p>
+            </div>
+            
+            <div class="animation-area">
+                <div class="dancing-squares">
+                    <div class="square square-1"></div>
+                    <div class="square square-2"></div>
+                    <div class="square square-3"></div>
+                    <div class="square square-4"></div>
+                </div>
+            </div>
+        </section>
+    </div>
+</body>
+</html>

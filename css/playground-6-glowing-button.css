@@ -1,0 +1,207 @@
+/* ===================================================
+   PLAYGROUND 6: THE GLOWING BUTTON
+   ===================================================
+   
+   Learn to create stunning glow effects! You'll make a button
+   that pulses with energy using box-shadow and filters.
+   
+   🎯 LEARNING GOALS:
+   - Animate box-shadow for glow effects
+   - Use filter: brightness() and blur()
+   - Create pulsing/breathing animations
+   - Build interactive button effects
+   
+   ================================================= */
+
+/* STEP 1: Style the base button */
+.glowing-button {
+    /* Basic button styling */
+    padding: 20px 40px;
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    
+    /* Remove default button styles */
+    outline: none;
+    
+    /* Position for glow effects */
+    position: relative;
+    
+    /* TODO #1: Add the pulsing glow animation */
+    /* animation: pulse-glow 2s ease-in-out infinite; */
+    
+    /* Smooth transitions for hover effects */
+    transition: all 0.3s ease;
+}
+
+/* STEP 2: Hover effect for interactivity */
+.glowing-button:hover {
+    /* Make it bigger on hover */
+    transform: scale(1.05);
+    
+    /* TODO #2: Add a stronger glow on hover */
+    /* box-shadow: 0 0 30px rgba(102, 126, 234, 0.8), 
+                   0 0 60px rgba(102, 126, 234, 0.4); */
+}
+
+/* STEP 3: The pulsing glow animation */
+@keyframes pulse-glow {
+    0% {
+        box-shadow: 0 0 5px rgba(102, 126, 234, 0.3),
+                    0 0 10px rgba(102, 126, 234, 0.2);
+        /* TODO #3: Set filter brightness to normal (try 1) */
+        filter: brightness(/* YOUR VALUE HERE */);
+    }
+    
+    50% {
+        /* TODO #4: Create a strong glow with box-shadow */
+        box-shadow: 0 0 20px rgba(102, 126, 234, 0.8),
+                    0 0 40px rgba(102, 126, 234, 0.4),
+                    0 0 /* YOUR SIZE HERE */px rgba(102, 126, 234, 0.2);
+        
+        /* TODO #5: Make it brighter with filter (try 1.2) */
+        filter: brightness(/* YOUR VALUE HERE */);
+    }
+    
+    100% {
+        box-shadow: 0 0 5px rgba(102, 126, 234, 0.3),
+                    0 0 10px rgba(102, 126, 234, 0.2);
+        filter: brightness(1);
+    }
+}
+
+/* UNDERSTANDING BOX-SHADOW:
+   =========================
+   
+   box-shadow creates drop shadows and glows:
+   box-shadow: x-offset y-offset blur-radius spread-radius color;
+   
+   For glow effects:
+   - x-offset: 0 (no horizontal offset)
+   - y-offset: 0 (no vertical offset)  
+   - blur-radius: larger = more glow
+   - spread-radius: usually not needed for glows
+   - color: use rgba() for transparency
+   
+   You can stack multiple shadows with commas:
+   box-shadow: 0 0 10px blue, 0 0 20px blue, 0 0 30px blue;
+*/
+
+/* UNDERSTANDING FILTER EFFECTS:
+   =============================
+   
+   The filter property adds visual effects:
+   - brightness(1) = normal brightness
+   - brightness(1.5) = 50% brighter
+   - brightness(0.5) = 50% darker
+   - blur(5px) = blur effect
+   - contrast(1.2) = more contrast
+   - saturate(1.5) = more saturated colors
+   
+   You can combine filters:
+   filter: brightness(1.2) blur(1px) saturate(1.3);
+*/
+
+/* STEP 4: Advanced glow variations */
+
+/* TODO #6: Uncomment for a rainbow glow effect! */
+/*
+@keyframes rainbow-glow {
+    0% { box-shadow: 0 0 20px #ff0000; }
+    16% { box-shadow: 0 0 20px #ff8000; }
+    33% { box-shadow: 0 0 20px #ffff00; }
+    50% { box-shadow: 0 0 20px #00ff00; }
+    66% { box-shadow: 0 0 20px #0080ff; }
+    83% { box-shadow: 0 0 20px #8000ff; }
+    100% { box-shadow: 0 0 20px #ff0000; }
+}
+*/
+
+/* TODO #7: Uncomment for a breathing/scaling effect! */
+/*
+@keyframes breathe {
+    0%, 100% {
+        transform: scale(1);
+        box-shadow: 0 0 10px rgba(102, 126, 234, 0.5);
+    }
+    50% {
+        transform: scale(1.1);
+        box-shadow: 0 0 30px rgba(102, 126, 234, 0.8),
+                    0 0 60px rgba(102, 126, 234, 0.3);
+    }
+}
+*/
+
+/* TODO #8: Uncomment for a electric spark effect! */
+/*
+@keyframes electric {
+    0%, 100% {
+        box-shadow: 0 0 5px rgba(102, 126, 234, 0.3);
+        filter: brightness(1);
+    }
+    10% {
+        box-shadow: 0 0 25px rgba(255, 255, 255, 0.8),
+                    0 0 50px rgba(102, 126, 234, 0.6);
+        filter: brightness(1.5);
+    }
+    20% {
+        box-shadow: 0 0 5px rgba(102, 126, 234, 0.3);
+        filter: brightness(1);
+    }
+}
+*/
+
+/* EXPERIMENT ZONE:
+   ================
+   
+   TODO #9: Try different glow colors
+   Instead of rgba(102, 126, 234, 0.8), try:
+   - rgba(255, 0, 0, 0.8) for red glow
+   - rgba(0, 255, 0, 0.8) for green glow
+   - rgba(255, 255, 0, 0.8) for yellow glow
+   
+   TODO #10: Adjust the pulse timing
+   Current: pulse-glow 2s ease-in-out infinite
+   Try: pulse-glow 1s ease-in-out infinite (faster)
+   Try: pulse-glow 4s ease-in-out infinite (slower)
+   
+   TODO #11: Create multiple button states
+   Can you make the button have different glows for:
+   - :hover (mouse over)
+   - :active (being clicked)
+   - :focus (keyboard focus)
+   
+   Example:
+   .glowing-button:active {
+       box-shadow: 0 0 40px rgba(102, 126, 234, 1.0);
+       transform: scale(0.98);
+   }
+*/
+
+/* PERFORMANCE TIP:
+   ================
+   
+   Box-shadow can be expensive for performance when animated.
+   For complex effects, consider using pseudo-elements with
+   opacity animations instead of constantly changing box-shadow.
+   
+   But for simple glows like this, box-shadow works great!
+*/
+
+/* REAL-WORLD USES:
+   ================
+   
+   Glowing button effects are used for:
+   - Call-to-action buttons
+   - Gaming interfaces
+   - Sci-fi themed websites
+   - Loading indicators
+   - Status indicators (success/error)
+   - Interactive elements that need attention
+   - Night mode interfaces
+   - Premium/VIP buttons
+*/

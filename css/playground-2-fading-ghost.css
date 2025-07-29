@@ -1,0 +1,154 @@
+/* ===================================================
+   PLAYGROUND 2: THE FADING GHOST
+   ===================================================
+   
+   Now you'll learn about opacity animations - perfect for
+   creating fade effects, mysterious appearances, and more!
+   
+   🎯 LEARNING GOALS:
+   - Animate the opacity property
+   - Create complex shapes with CSS
+   - Practice animation timing
+   - Position elements with absolute positioning
+   
+   ================================================= */
+
+/* STEP 1: Create the ghost body */
+.ghost-body {
+    width: 100px;
+    height: 120px;
+    background: #f8f9fa;
+    border-radius: 50px 50px 0 0; /* Rounded top, flat bottom */
+    position: relative;
+    
+    /* Add some ghostly shadow */
+    box-shadow: 0 0 20px rgba(248, 249, 250, 0.8);
+    
+    /* TODO #1: Uncomment the animation below */
+    /* animation: fade 3s ease-in-out infinite; */
+}
+
+/* Add the wavy bottom to make it look more ghost-like */
+.ghost-body::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 20px;
+    background: #f8f9fa;
+    /* This creates the wavy bottom effect */
+    border-radius: 0 0 50% 0;
+}
+
+/* STEP 2: Style the ghost eyes */
+.ghost-eyes {
+    position: absolute;
+    top: 30px;
+    left: 50%;
+    transform: translateX(-50%); /* Center the eyes */
+    width: 60px;
+    height: 20px;
+}
+
+.eye {
+    width: 12px;
+    height: 12px;
+    background: #333;
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    
+    /* TODO #2: Uncomment the animation for spooky blinking eyes! */
+    /* animation: blink 4s ease-in-out infinite; */
+}
+
+.eye-left {
+    left: 10px;
+}
+
+.eye-right {
+    right: 10px;
+}
+
+/* STEP 3: The fade animation */
+@keyframes fade {
+    /* Start fully visible */
+    0% {
+        opacity: 1;
+    }
+    
+    /* TODO #3: Make the ghost completely invisible at 50% */
+    50% {
+        opacity: /* YOUR CODE HERE (hint: 0 = invisible, 1 = fully visible) */;
+    }
+    
+    /* End fully visible again */
+    100% {
+        opacity: 1;
+    }
+}
+
+/* STEP 4: Bonus blinking animation */
+@keyframes blink {
+    0%, 90%, 100% {
+        /* Eyes open - make them visible */
+        opacity: 1;
+        transform: scaleY(1);
+    }
+    
+    95% {
+        /* Eyes closed - make them look squished */
+        opacity: 0.8;
+        transform: scaleY(0.1);
+    }
+}
+
+/* UNDERSTANDING OPACITY:
+   ======================
+   
+   Opacity controls how see-through an element is:
+   - opacity: 1 = completely solid (not see-through at all)
+   - opacity: 0.5 = half see-through 
+   - opacity: 0 = completely invisible
+   
+   Unlike display: none or visibility: hidden, elements with 
+   opacity: 0 still take up space and can still be animated!
+*/
+
+/* EXPERIMENT TIME!
+   ================
+   
+   TODO #4: Try different timing for the fade
+   Current: fade 3s ease-in-out infinite
+   Try: fade 1s linear infinite (fast and constant)
+   Try: fade 5s ease-out infinite (slow with slow ending)
+   
+   TODO #5: Create a spookier effect
+   Can you make the ghost fade faster but stay invisible longer?
+   Hint: Try changing the percentages in the keyframes!
+   
+   Example:
+   0% { opacity: 1; }
+   20% { opacity: 0; }  
+   80% { opacity: 0; }
+   100% { opacity: 1; }
+   
+   TODO #6: Add movement while fading
+   Can you make the ghost move up and down while it fades?
+   Hint: Add transform: translateY() to your keyframes!
+*/
+
+/* REAL-WORLD USES:
+   ================
+   
+   Opacity animations are everywhere in web design:
+   - Loading spinners that fade in
+   - Modal dialogs that appear smoothly
+   - Hover effects on images
+   - Page transitions
+   - Tooltip appearances
+   - Error messages that fade away
+   
+   You'll use opacity animations constantly as a developer!
+*/

@@ -1,0 +1,258 @@
+/* ===================================================
+   PLAYGROUND 7: THE DANCING SQUARES
+   ===================================================
+   
+   Welcome to the grand finale! You'll coordinate multiple
+   animations to create a synchronized dance performance.
+   
+   🎯 LEARNING GOALS:
+   - Coordinate multiple element animations
+   - Master animation delays and timing
+   - Combine all previous animation types
+   - Create complex choreographed effects
+   
+   🎉 This playground brings together everything you've learned!
+   
+   ================================================= */
+
+/* STEP 1: Set up the dance floor */
+.dancing-squares {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+    height: 200px;
+}
+
+/* STEP 2: Style the basic squares */
+.square {
+    width: 50px;
+    height: 50px;
+    border-radius: 8px;
+    
+    /* Each square will have the same dance moves but different timing */
+    /* TODO #1: Add the main dance animation */
+    /* animation: dance 4s ease-in-out infinite; */
+}
+
+/* STEP 3: Give each square its own color and timing */
+.square-1 {
+    background: linear-gradient(135deg, #ff6b6b, #ee5a24);
+    /* TODO #2: No delay for square 1 - it leads the dance! */
+    /* animation-delay: 0s; */
+}
+
+.square-2 {
+    background: linear-gradient(135deg, #ffa502, #ff6348);
+    /* TODO #3: Small delay for square 2 - try 0.2s */
+    /* animation-delay: 0.2s; */
+}
+
+.square-3 {
+    background: linear-gradient(135deg, #3742fa, #2f3542);
+    /* TODO #4: Medium delay for square 3 - try 0.4s */
+    /* animation-delay: 0.4s; */
+}
+
+.square-4 {
+    background: linear-gradient(135deg, #2ed573, #7bed9f);
+    /* TODO #5: Longer delay for square 4 - try 0.6s */
+    /* animation-delay: 0.6s; */
+}
+
+/* STEP 4: The main dance choreography */
+@keyframes dance {
+    0% {
+        transform: translateY(0) scale(1) rotate(0deg);
+        opacity: 1;
+    }
+    
+    25% {
+        /* TODO #6: Jump up and spin - try translateY(-40px) rotate(90deg) */
+        transform: translateY(/* UP DISTANCE */) scale(1.2) rotate(/* ROTATION */);
+        opacity: 0.8;
+    }
+    
+    50% {
+        /* TODO #7: Come down and spin more - try translateY(20px) rotate(180deg) */
+        transform: translateY(/* DOWN DISTANCE */) scale(0.8) rotate(/* MORE ROTATION */);
+        opacity: 1;
+    }
+    
+    75% {
+        /* TODO #8: Jump again and complete the spin - try translateY(-20px) rotate(270deg) */
+        transform: translateY(/* UP AGAIN */) scale(1.1) rotate(/* ALMOST FULL SPIN */);
+        opacity: 0.9;
+    }
+    
+    100% {
+        transform: translateY(0) scale(1) rotate(360deg);
+        opacity: 1;
+    }
+}
+
+/* STEP 5: Advanced choreography options */
+
+/* TODO #9: Uncomment this for a wave effect instead of the dance! */
+/*
+@keyframes wave {
+    0%, 100% {
+        transform: translateY(0) scaleY(1);
+        background: var(--original-bg);
+    }
+    50% {
+        transform: translateY(-60px) scaleY(1.5);
+        background: linear-gradient(135deg, #a29bfe, #6c5ce7);
+    }
+}
+*/
+
+/* TODO #10: Uncomment this for a color-changing dance! */
+/*
+@keyframes color-dance {
+    0% {
+        transform: translateY(0) rotate(0deg);
+        background: #ff6b6b;
+    }
+    25% {
+        transform: translateY(-30px) rotate(90deg);
+        background: #ffa502;
+    }
+    50% {
+        transform: translateY(0) rotate(180deg);
+        background: #3742fa;
+    }
+    75% {
+        transform: translateY(-30px) rotate(270deg);
+        background: #2ed573;
+    }
+    100% {
+        transform: translateY(0) rotate(360deg);
+        background: #ff6b6b;
+    }
+}
+*/
+
+/* TODO #11: Uncomment for a bouncing formation! */
+/*
+@keyframes formation-bounce {
+    0%, 100% {
+        transform: translateY(0) translateX(0);
+    }
+    25% {
+        transform: translateY(-40px) translateX(-10px);
+    }
+    50% {
+        transform: translateY(0) translateX(0);
+    }
+    75% {
+        transform: translateY(-40px) translateX(10px);
+    }
+}
+*/
+
+/* UNDERSTANDING ANIMATION COORDINATION:
+   ====================================
+   
+   To create coordinated animations:
+   1. Use the SAME animation on multiple elements
+   2. Use different animation-delay values
+   3. The delays create the "wave" or "follow" effect
+   
+   Example timeline with 0.2s delays:
+   Square 1: starts at 0s
+   Square 2: starts at 0.2s  
+   Square 3: starts at 0.4s
+   Square 4: starts at 0.6s
+   
+   This creates a beautiful cascading effect!
+*/
+
+/* STEP 6: Interactive dance floor */
+.dancing-squares:hover .square {
+    /* TODO #12: Make squares dance faster when you hover! */
+    /* animation-duration: 2s; */
+}
+
+/* TODO #13: Individual square hover effects */
+/*
+.square:hover {
+    animation-play-state: paused;
+    transform: scale(1.3) rotate(45deg);
+    z-index: 10;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+}
+*/
+
+/* EXPERIMENT ZONE:
+   ================
+   
+   TODO #14: Create your own dance moves!
+   Try changing the keyframe percentages and transforms:
+   - Make squares move sideways (translateX)
+   - Add more rotation (try 720deg for double spins)
+   - Create zigzag patterns
+   - Add opacity changes for fade effects
+   
+   TODO #15: Adjust the choreography timing
+   Current delays: 0s, 0.2s, 0.4s, 0.6s
+   Try: 0s, 0.1s, 0.2s, 0.3s (faster wave)
+   Try: 0s, 0.5s, 1s, 1.5s (slower wave)
+   
+   TODO #16: Add more squares!
+   Copy the HTML structure and add square-5, square-6, etc.
+   Give them their own colors and delays!
+   
+   TODO #17: Create formation changes
+   Can you make the squares form different patterns?
+   - Line up vertically
+   - Form a circle
+   - Create a diamond shape
+*/
+
+/* MASTER CHALLENGE:
+   =================
+   
+   TODO #18: The Ultimate Dance Battle!
+   Create three different dance routines:
+   1. A gentle sway for calm music
+   2. An energetic bounce for upbeat music  
+   3. A spinning tornado for dramatic music
+   
+   Use different @keyframes for each and apply them
+   with different CSS classes!
+*/
+
+/* REAL-WORLD APPLICATIONS:
+   ========================
+   
+   Multi-element coordinated animations are used for:
+   - Loading animations (dots, bars, spinners)
+   - Data visualization (charts, graphs)
+   - User interface feedback
+   - Storytelling and presentations
+   - Game animations
+   - Brand experiences
+   - Page transitions
+   - Interactive art installations
+   
+   Mastering coordination is key to creating professional,
+   polished animations that users love!
+*/
+
+/* 🎊 CONGRATULATIONS! 🎊
+   ======================
+   
+   You've completed all 7 animation playgrounds!
+   You now know how to:
+   ✅ Create keyframe animations
+   ✅ Animate position, size, rotation, and color
+   ✅ Control timing, delays, and repetition
+   ✅ Coordinate multiple elements
+   ✅ Create complex visual effects
+   
+   You're ready to bring any website to life with CSS animations!
+   Keep experimenting, keep creating, and most importantly...
+   keep having fun with code! 🚀
+*/

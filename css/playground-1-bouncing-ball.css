@@ -1,0 +1,138 @@
+/* ===================================================
+   PLAYGROUND 1: THE BOUNCING BALL
+   ===================================================
+   
+   Welcome to your first CSS animation! In this playground,
+   you'll learn how to create animations using @keyframes.
+   
+   🎯 LEARNING GOALS:
+   - Understand @keyframes syntax
+   - Learn the animation property
+   - Practice with transform: translateY()
+   - Control animation timing and repetition
+   
+   📝 INSTRUCTIONS:
+   Follow the steps below. When you see TODO comments,
+   that's where you need to make changes!
+   
+   ================================================= */
+
+/* STEP 1: First, let's style our ball
+   ================================== */
+
+.bouncing-ball {
+    /* Make it look like a ball */
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(135deg, #ff6b6b, #ee5a24);
+    border-radius: 50%; /* This makes it circular */
+    
+    /* Add some visual polish */
+    box-shadow: 0 8px 20px rgba(255, 107, 107, 0.3);
+    
+    /* TODO #1: Uncomment the line below to apply the animation */
+    /* animation: bounce 2s ease-in-out infinite; */
+}
+
+/* STEP 2: Understanding @keyframes
+   ================================
+   
+   @keyframes is how we define what should happen during an animation.
+   Think of it like a timeline:
+   - 0% = beginning of animation
+   - 50% = middle of animation  
+   - 100% = end of animation
+   
+   We can also use "from" and "to" instead of percentages for simple animations.
+*/
+
+@keyframes bounce {
+    /* At the start (0%), the ball is at the bottom */
+    0% {
+        transform: translateY(0px);
+        /* translateY moves things up (-) or down (+) */
+    }
+    
+    /* At the middle (50%), the ball is at the top */
+    50% {
+        /* TODO #2: Fill in the translateY value to move the ball up 100px */
+        transform: translateY(/* YOUR CODE HERE */);
+    }
+    
+    /* At the end (100%), the ball returns to the bottom */
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+/* STEP 3: Animation Property Breakdown
+   ===================================
+   
+   The animation property is actually a shorthand for several properties:
+   
+   animation: name duration timing-function iteration-count;
+   
+   Let's break down "bounce 2s ease-in-out infinite":
+   - bounce = name of our @keyframes
+   - 2s = duration (how long one cycle takes)
+   - ease-in-out = timing function (how the speed changes)
+   - infinite = how many times to repeat
+   
+   OTHER TIMING OPTIONS YOU CAN TRY:
+   - linear (constant speed)
+   - ease (default - slow start, fast middle, slow end)
+   - ease-in (slow start)
+   - ease-out (slow end)
+   - ease-in-out (slow start and end)
+*/
+
+/* EXPERIMENT ZONE! 
+   ================
+   
+   Once you've completed TODO #1 and #2 above, try changing these values:
+   
+   TODO #3: Change the animation duration
+   Try: 1s (fast), 3s (slow), 0.5s (very fast)
+   
+   TODO #4: Change the timing function
+   Try: linear, ease, ease-in, ease-out
+   
+   TODO #5: Change the number of repetitions
+   Try: 1 (bounce once), 3 (bounce 3 times), infinite (never stop)
+   
+   BONUS CHALLENGE:
+   Can you make the ball bounce higher? (Hint: change the translateY value)
+   Can you make it bounce sideways too? (Hint: try translateX)
+*/
+
+/* STEP 4: Understanding Transform
+   ==============================
+   
+   The transform property is perfect for animations because it:
+   - Doesn't affect the layout of other elements
+   - Is smooth and performant
+   - Can combine multiple transformations
+   
+   Common transform functions:
+   - translateX(50px) = move right 50px
+   - translateY(-30px) = move up 30px  
+   - scale(1.5) = make 1.5 times bigger
+   - rotate(45deg) = rotate 45 degrees
+   
+   You can combine them:
+   transform: translateY(-50px) scale(1.2) rotate(10deg);
+*/
+
+/* DEBUGGING TIPS:
+   ===============
+   
+   If your animation isn't working:
+   1. Check that you uncommented the animation line in TODO #1
+   2. Make sure your @keyframes name matches the animation name
+   3. Verify your syntax (don't forget semicolons!)
+   4. Check the browser's developer tools for error messages
+   
+   🎉 CONGRATULATIONS!
+   Once your ball is bouncing, you've created your first CSS animation!
+   This is the foundation for all the amazing animations you'll build next.
+*/
