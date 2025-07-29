@@ -1,110 +1,110 @@
 /* ===================================================
    PLAYGROUND 5: THE SPINNING WHEEL
    ===================================================
-   
+
    Time to learn about rotation animations! You'll create
    a colorful wheel that spins round and round forever.
-   
+
    🎯 LEARNING GOALS:
    - Use transform: rotate() for spinning
    - Master infinite animations
    - Create radial designs with positioning
    - Understand degrees and rotation
-   
+
    ================================================= */
 
 /* STEP 1: Create the main wheel container */
 .spinning-wheel {
-    position: relative;
-    width: 150px;
-    height: 150px;
-    
-    /* TODO #1: Make the whole wheel spin */
-    /* animation: spin 3s linear infinite; */
+  position: relative;
+  width: 150px;
+  height: 150px;
+
+  /* TODO #1: Make the whole wheel spin */
+  /* animation: spin 3s linear infinite; */
 }
 
 /* STEP 2: Style the center hub */
 .wheel-center {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 30px;
-    height: 30px;
-    background: radial-gradient(circle, #2c3e50, #34495e);
-    border-radius: 50%;
-    z-index: 10; /* Make sure it's on top of spokes */
-    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 30px;
+  height: 30px;
+  background: radial-gradient(circle, #2c3e50, #34495e);
+  border-radius: 50%;
+  z-index: 10; /* Make sure it's on top of spokes */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
 
 /* STEP 3: Create the spokes */
 .spoke {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 60px;
-    height: 8px;
-    transform-origin: left center; /* Rotate from the left edge */
-    border-radius: 4px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 60px;
+  height: 8px;
+  transform-origin: left center; /* Rotate from the left edge */
+  border-radius: 4px;
 }
 
 /* Position each spoke at different angles */
 .spoke-1 {
-    background: linear-gradient(to right, #e74c3c, #c0392b);
-    transform: translate(0, -50%) rotate(0deg);
+  background: linear-gradient(to right, #e74c3c, #c0392b);
+  transform: translate(0, -50%) rotate(0deg);
 }
 
 .spoke-2 {
-    background: linear-gradient(to right, #f39c12, #e67e22);
-    /* TODO #2: Set rotation to 60 degrees */
-    transform: translate(0, -50%) rotate(/* YOUR DEGREES HERE */deg);
+  background: linear-gradient(to right, #f39c12, #e67e22);
+  /* TODO #2: Set rotation to 60 degrees */
+  transform: translate(0, -50%) rotate(/* YOUR DEGREES HERE */ deg);
 }
 
 .spoke-3 {
-    background: linear-gradient(to right, #f1c40f, #f39c12);
-    /* TODO #3: Set rotation to 120 degrees */
-    transform: translate(0, -50%) rotate(/* YOUR DEGREES HERE */deg);
+  background: linear-gradient(to right, #f1c40f, #f39c12);
+  /* TODO #3: Set rotation to 120 degrees */
+  transform: translate(0, -50%) rotate(/* YOUR DEGREES HERE */ deg);
 }
 
 .spoke-4 {
-    background: linear-gradient(to right, #2ecc71, #27ae60);
-    /* TODO #4: Set rotation to 180 degrees */
-    transform: translate(0, -50%) rotate(/* YOUR DEGREES HERE */deg);
+  background: linear-gradient(to right, #2ecc71, #27ae60);
+  /* TODO #4: Set rotation to 180 degrees */
+  transform: translate(0, -50%) rotate(/* YOUR DEGREES HERE */ deg);
 }
 
 .spoke-5 {
-    background: linear-gradient(to right, #3498db, #2980b9);
-    /* TODO #5: Set rotation to 240 degrees */
-    transform: translate(0, -50%) rotate(/* YOUR DEGREES HERE */deg);
+  background: linear-gradient(to right, #3498db, #2980b9);
+  /* TODO #5: Set rotation to 240 degrees */
+  transform: translate(0, -50%) rotate(/* YOUR DEGREES HERE */ deg);
 }
 
 .spoke-6 {
-    background: linear-gradient(to right, #9b59b6, #8e44ad);
-    /* TODO #6: Set rotation to 300 degrees */
-    transform: translate(0, -50%) rotate(/* YOUR DEGREES HERE */deg);
+  background: linear-gradient(to right, #9b59b6, #8e44ad);
+  /* TODO #6: Set rotation to 300 degrees */
+  transform: translate(0, -50%) rotate(/* YOUR DEGREES HERE */ deg);
 }
 
 /* STEP 4: The spinning animation */
 @keyframes spin {
-    /* TODO #7: Fill in the rotation values */
-    from {
-        transform: rotate(/* START ROTATION - try 0deg */);
-    }
-    to {
-        transform: rotate(/* END ROTATION - try 360deg */);
-    }
+  /* TODO #7: Fill in the rotation values */
+  from {
+    transform: rotate(/* START ROTATION - try 0deg */);
+  }
+  to {
+    transform: rotate(/* END ROTATION - try 360deg */);
+  }
 }
 
 /* UNDERSTANDING ROTATION:
    =======================
-   
+
    transform: rotate() spins elements around their center:
    - rotate(0deg) = no rotation
    - rotate(90deg) = quarter turn (right angle)
    - rotate(180deg) = half turn (upside down)
    - rotate(360deg) = full turn (back to start)
    - rotate(-90deg) = quarter turn counter-clockwise
-   
+
    You can rotate more than 360 degrees:
    - rotate(720deg) = two full spins
    - rotate(1080deg) = three full spins
@@ -112,43 +112,43 @@
 
 /* UNDERSTANDING INFINITE ANIMATIONS:
    ==================================
-   
+
    animation-iteration-count controls how many times an animation repeats:
    - 1 = play once
    - 3 = play 3 times
    - infinite = never stop
-   
+
    For spinning wheels, loading spinners, and other continuous
    animations, 'infinite' is perfect!
 */
 
 /* UNDERSTANDING LINEAR TIMING:
    ============================
-   
+
    linear timing means constant speed - no speeding up or slowing down.
    This is perfect for spinning wheels because we want smooth, steady rotation.
-   
+
    Other timing functions like ease-in-out would make the wheel
    speed up and slow down, which would look weird for a wheel!
 */
 
 /* EXPERIMENT ZONE:
    ================
-   
+
    TODO #8: Try different speeds
    Current: spin 3s linear infinite
    Try: spin 1s linear infinite (fast)
    Try: spin 8s linear infinite (slow)
    Try: spin 0.5s linear infinite (very fast!)
-   
+
    TODO #9: Reverse the direction
    Can you make the wheel spin backwards?
    Hint: Try negative degrees or reverse the from/to values!
-   
+
    TODO #10: Create a wobble effect
    Can you make the wheel wobble while it spins?
    Try adding translateX() or translateY() to your keyframes!
-   
+
    Example:
    @keyframes wobble-spin {
        0% { transform: rotate(0deg) translateX(0px); }
@@ -161,26 +161,48 @@
 
 /* BONUS: Individual spoke animations */
 /* TODO #11: Uncomment this to make each spoke pulse while the wheel spins! */
-/*
-.spoke {
-    animation: pulse 2s ease-in-out infinite;
+/* The CSS custom property "rotation" is used to make sure that each spoke maintains its rotation position */
+/* .spoke-1 {
+  animation: pulse 2s ease-in-out infinite;
+  --rotation: 0deg;
+}
+.spoke-2 {
+  animation: pulse 2s ease-in-out infinite;
+  --rotation: 60deg;
+}
+.spoke-3 {
+  animation: pulse 2s ease-in-out infinite;
+  --rotation: 120deg;
+}
+.spoke-4 {
+  animation: pulse 2s ease-in-out infinite;
+  --rotation: 180deg;
+}
+.spoke-5 {
+  animation: pulse 2s ease-in-out infinite;
+  --rotation: 240deg;
+}
+.spoke-6 {
+  animation: pulse 2s ease-in-out infinite;
+  --rotation: 300deg;
 }
 
 @keyframes pulse {
-    0%, 100% { 
-        opacity: 1; 
-        transform: translate(0, -50%) rotate(var(--rotation)) scale(1);
-    }
-    50% { 
-        opacity: 0.7; 
-        transform: translate(0, -50%) rotate(var(--rotation)) scale(1.1);
-    }
+  0%,
+  100% {
+    opacity: 1;
+    transform: translate(0, -50%) rotate(var(--rotation)) scale(1);
+  }
+  50% {
+    opacity: 0.7;
+    transform: translate(0, -50%) rotate(var(--rotation)) scale(1.5);
+  }
 }
 */
 
 /* REAL-WORLD USES:
    ================
-   
+
    Rotation animations are everywhere:
    - Loading spinners
    - Gear icons in settings
@@ -190,7 +212,7 @@
    - Game elements (spinning coins, wheels)
    - Logo animations
    - Interactive controls (knobs, dials)
-   
+
    The combination of rotate + infinite is one of the most
    common animation patterns in web development!
 */
