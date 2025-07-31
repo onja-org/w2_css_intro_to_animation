@@ -15,63 +15,66 @@
 
 /* STEP 1: Style the base button */
 .glowing-button {
-    /* Basic button styling */
-    padding: 20px 40px;
-    font-size: 18px;
-    font-weight: bold;
-    color: white;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    border: none;
-    border-radius: 50px;
-    cursor: pointer;
-    
-    /* Remove default button styles */
-    outline: none;
-    
-    /* Position for glow effects */
-    position: relative;
-    
-    /* TODO #1: Add the pulsing glow animation */
-    /* animation: pulse-glow 2s ease-in-out infinite; */
-    
-    /* Smooth transitions for hover effects */
-    transition: all 0.3s ease;
+  /* Basic button styling */
+  padding: 20px 40px;
+  font-size: 18px;
+  font-weight: bold;
+  color: white;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+
+  /* Remove default button styles */
+  outline: none;
+
+  /* Position for glow effects */
+  position: relative;
+
+  /* TODO #1: Add the pulsing glow animation */
+  /* animation: pulse-glow 2s ease-in-out infinite; */
+
+  /* Smooth transitions for hover effects */
+  transition: all 0.3s ease;
 }
 
 /* STEP 2: Hover effect for interactivity */
 .glowing-button:hover {
-    /* Make it bigger on hover */
-    transform: scale(1.05);
-    
-    /* TODO #2: Add a stronger glow on hover */
-    /* box-shadow: 0 0 30px rgba(102, 126, 234, 0.8), 
+  /* Make it bigger on hover */
+  transform: scale(1.05);
+
+  /* TODO #2: Add a stronger glow on hover */
+  /* box-shadow: 0 0 30px rgba(102, 126, 234, 0.8), 
                    0 0 60px rgba(102, 126, 234, 0.4); */
 }
 
 /* STEP 3: The pulsing glow animation */
 @keyframes pulse-glow {
-    0% {
-        box-shadow: 0 0 5px rgba(102, 126, 234, 0.3),
-                    0 0 10px rgba(102, 126, 234, 0.2);
-        /* TODO #3: Set filter brightness to normal (try 1) */
-        filter: brightness(/* YOUR VALUE HERE */);
-    }
-    
-    50% {
-        /* TODO #4: Create a strong glow with box-shadow */
-        box-shadow: 0 0 20px rgba(102, 126, 234, 0.8),
-                    0 0 40px rgba(102, 126, 234, 0.4),
-                    0 0 /* YOUR SIZE HERE */px rgba(102, 126, 234, 0.2);
-        
-        /* TODO #5: Make it brighter with filter (try 1.2) */
-        filter: brightness(/* YOUR VALUE HERE */);
-    }
-    
-    100% {
-        box-shadow: 0 0 5px rgba(102, 126, 234, 0.3),
-                    0 0 10px rgba(102, 126, 234, 0.2);
-        filter: brightness(1);
-    }
+  0% {
+    box-shadow:
+      0 0 5px rgba(102, 126, 234, 0.3),
+      0 0 10px rgba(102, 126, 234, 0.2);
+    /* TODO #3: Set filter brightness to normal (try 1) */
+    filter: brightness(/* YOUR VALUE HERE */);
+  }
+
+  50% {
+    /* TODO #4: Create a strong glow with box-shadow */
+    box-shadow:
+      0 0 20px rgba(102, 126, 234, 0.8),
+      0 0 40px rgba(102, 126, 234, 0.4),
+      0 0 /* YOUR SIZE HERE */ px rgba(102, 126, 234, 0.2);
+
+    /* TODO #5: Make it brighter with filter (try 1.2) */
+    filter: brightness(/* YOUR VALUE HERE */);
+  }
+
+  100% {
+    box-shadow:
+      0 0 5px rgba(102, 126, 234, 0.3),
+      0 0 10px rgba(102, 126, 234, 0.2);
+    filter: brightness(1);
+  }
 }
 
 /* UNDERSTANDING BOX-SHADOW:
