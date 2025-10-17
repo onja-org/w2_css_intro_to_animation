@@ -38,6 +38,7 @@ This lab teaches CSS animations progressively through practical exercises. Stude
 2. Open `index.html` in your browser
 3. Follow the detailed instructions in `lab/README.md`
 4. Work through each playground's CSS file in order
+5. Run `npm test` to check if your tasks pass
 
 ## Prerequisites
 

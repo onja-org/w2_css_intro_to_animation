@@ -1,0 +1,19 @@
+{
+  "name": "css-animation-playgrounds",
+  "version": "1.0.0",
+  "description": "CSS Animation Playgrounds for practicing keyframes, transforms, transitions, and advanced animation effects.",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "Onja dev",
+  "license": "MIT",
+  "devDependencies": {
+    "jest": "^29.7.0",
+    "jest-environment-jsdom": "^29.7.0",
+    "jsdom": "^22.1.0"
+  },
+  "jest": {
+    "testEnvironment": "jsdom"
+  }
+}
