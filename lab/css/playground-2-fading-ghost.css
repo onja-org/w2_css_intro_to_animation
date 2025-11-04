@@ -25,7 +25,7 @@
   box-shadow: 0 0 20px #ffffffaa;
 
   /* TODO #1: Uncomment the animation below */
-  /* animation: fade 3s ease-in-out infinite; */
+  animation: fade 3s ease-in-out infinite;
 }
 
 .fading-ghost {
@@ -51,7 +51,7 @@
   top: 0;
 
   /* TODO #2: Uncomment the animation for spooky blinking eyes! */
-  /* animation: blink 4s ease-in-out infinite; */
+  animation: blink 4s ease-in-out infinite;
 }
 
 .eye-left {
@@ -71,7 +71,7 @@
 
   /* TODO #3: Make the ghost completely invisible at 50% */
   50% {
-    opacity: /* YOUR CODE HERE (hint: 0 = invisible, 1 = fully visible) */;
+    opacity: 0;
   }
 
   /* End fully visible again */

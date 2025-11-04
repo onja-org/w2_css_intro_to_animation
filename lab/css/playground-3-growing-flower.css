@@ -32,7 +32,7 @@
   border-radius: 4px;
 
   /* TODO #1: Uncomment to make the stem grow from the ground */
-  /* animation: grow-up 2s ease-out; */
+  animation: grow-up 2s ease-out;
 }
 
 /* STEP 3: Position the flower head */
@@ -58,7 +58,7 @@
   z-index: 10; /* Make sure it appears on top of petals */
 
   /* TODO #2: Make the center appear after the petals */
-  /* animation: bloom 1s ease-out 2.5s both; */
+  animation: bloom 1s ease-out 2.5s both;
 }
 
 /* STEP 5: Create the petals */
@@ -71,7 +71,7 @@
   transform-origin: center bottom; /* Petals grow from their base */
 
   /* TODO #3: Uncomment the petal animation */
-  /* animation: bloom 1s ease-out both; */
+  animation: bloom 1s ease-out both;
 }
 
 /* Position each petal around the center */
@@ -81,7 +81,7 @@
   transform: translateX(-50%) rotate(0deg);
   --rotation: 0deg;
   /* TODO #4: Add animation delay - try 0.5s */
-  /* animation-delay: 0.5s; */
+  animation-delay: 0.5s;
 }
 
 .petal-2 {
@@ -90,7 +90,7 @@
   transform: rotate(60deg);
   --rotation: 60deg; /* We define the `rotation` CSS custom property (also known as a variable) for each petal to use in the animation keyframes below */
   /* TODO #5: Add animation delay - try 0.7s */
-  /* animation-delay: 0.7s; */
+  animation-delay: 0.7s;
 }
 
 .petal-3 {
@@ -99,7 +99,7 @@
   transform: rotate(120deg);
   --rotation: 120deg;
   /* TODO #6: Add animation delay - try 0.9s */
-  /* animation-delay: 0.9s; */
+  animation-delay: 0.9s;
 }
 
 .petal-4 {
@@ -108,7 +108,7 @@
   transform: translateX(-50%) rotate(180deg);
   --rotation: 180deg;
   /* TODO #7: Add animation delay - try 1.1s */
-  /* animation-delay: 1.1s; */
+  animation-delay: 1.1s;
 }
 
 .petal-5 {
@@ -117,7 +117,7 @@
   transform: rotate(240deg);
   --rotation: 240deg;
   /* TODO #8: Add animation delay - try 1.3s */
-  /* animation-delay: 1.3s; */
+  animation-delay: 1.3s;
 }
 
 .petal-6 {
@@ -126,7 +126,7 @@
   transform: rotate(300deg);
   --rotation: 300deg;
   /* TODO #9: Add animation delay - try 1.5s */
-  /* animation-delay: 1.5s; */
+  animation-delay: 1.5s;
 }
 
 /* STEP 6: The growing animations */
@@ -146,13 +146,13 @@
   from {
     /* TODO #10: Start with scale 0 (invisible) */
     /* Notice how we are using the `--rotation` variable that we defined for each petal to calculate 90 degrees less than the petal's rotation */
-    transform: scale(/* YOUR CODE HERE */) rotate(calc(var(--rotation) - 90deg));
+    transform: scale(0) rotate(calc(var(--rotation) - 90deg));
     opacity: 0;
   }
   to {
     /* TODO #11: End with scale 1 (normal size) */
     /* At the end of the animation we want the petal to be at the rotation we defined in the CSS variable for its class */
-    transform: scale(/* YOUR CODE HERE */) rotate(var(--rotation));
+    transform: scale(1) rotate(var(--rotation));
     opacity: 1;
   }
 }

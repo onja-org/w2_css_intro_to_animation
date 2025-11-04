@@ -20,7 +20,7 @@
   height: 150px;
 
   /* TODO #1: Make the whole wheel spin */
-  /* animation: spin 3s linear infinite; */
+  animation: spin 3s linear infinite;
 }
 
 /* STEP 2: Style the center hub */
@@ -57,41 +57,41 @@
 .spoke-2 {
   background: linear-gradient(to right, #f39c12, #e67e22);
   /* TODO #2: Set rotation to 60 degrees */
-  transform: translate(0, -50%) rotate(/* YOUR DEGREES HERE */ deg);
+  transform: translate(0, -50%) rotate(60deg);
 }
 
 .spoke-3 {
   background: linear-gradient(to right, #f1c40f, #f39c12);
   /* TODO #3: Set rotation to 120 degrees */
-  transform: translate(0, -50%) rotate(/* YOUR DEGREES HERE */ deg);
+  transform: translate(0, -50%) rotate(120deg);
 }
 
 .spoke-4 {
   background: linear-gradient(to right, #2ecc71, #27ae60);
   /* TODO #4: Set rotation to 180 degrees */
-  transform: translate(0, -50%) rotate(/* YOUR DEGREES HERE */ deg);
+  transform: translate(0, -50%) rotate(180deg);
 }
 
 .spoke-5 {
   background: linear-gradient(to right, #3498db, #2980b9);
   /* TODO #5: Set rotation to 240 degrees */
-  transform: translate(0, -50%) rotate(/* YOUR DEGREES HERE */ deg);
+  transform: translate(0, -50%) rotate(240deg);
 }
 
 .spoke-6 {
   background: linear-gradient(to right, #9b59b6, #8e44ad);
   /* TODO #6: Set rotation to 300 degrees */
-  transform: translate(0, -50%) rotate(/* YOUR DEGREES HERE */ deg);
+  transform: translate(0, -50%) rotate(300deg);
 }
 
 /* STEP 4: The spinning animation */
 @keyframes spin {
   /* TODO #7: Fill in the rotation values */
   from {
-    transform: rotate(/* START ROTATION - try 0deg */);
+    transform: rotate(0deg);
   }
   to {
-    transform: rotate(/* END ROTATION - try 360deg */);
+    transform: rotate(360deg);
   }
 }
 

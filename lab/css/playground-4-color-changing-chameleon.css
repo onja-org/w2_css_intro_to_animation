@@ -31,7 +31,7 @@
   border-radius: 30px 30px 15px 15px;
 
   /* TODO #1: Make the head change colors */
-  /* animation: color-shift 4s ease-in-out infinite; */
+  animation: color-shift 4s ease-in-out infinite;
 }
 
 /* Add an eye to the head */
@@ -57,7 +57,7 @@
   border-radius: 20px;
 
   /* TODO #2: Make the body change colors too, but with a delay */
-  /* animation: color-shift 4s ease-in-out infinite 0.5s; */
+  animation: color-shift 4s ease-in-out infinite 0.5s;
 }
 
 /* STEP 4: Create the curved tail */
@@ -72,7 +72,7 @@
   transform: rotate(-30deg);
 
   /* TODO #3: Make the tail change colors with another delay */
-  /* animation: color-shift 4s ease-in-out infinite 1s; */
+  animation: color-shift 4s ease-in-out infinite 1s;
 }
 
 /* STEP 5: Create the legs */
@@ -92,31 +92,31 @@
   border-radius: 6px;
 
   /* TODO #4: Make the legs change colors too */
-  /* animation: color-shift 4s ease-in-out infinite; */
+  animation: color-shift 4s ease-in-out infinite;
 }
 
 .leg-1 {
   left: 10px;
   /* TODO #5: Add delay for leg 1 - try 1.5s */
-  /* animation-delay: 1.5s; */
+  animation-delay: 1.5s;
 }
 
 .leg-2 {
   left: 30px;
   /* TODO #6: Add delay for leg 2 - try 2s */
-  /* animation-delay: 2s; */
+  animation-delay: 2s;
 }
 
 .leg-3 {
   left: 50px;
   /* TODO #7: Add delay for leg 3 - try 2.5s */
-  /* animation-delay: 2.5s; */
+  animation-delay: 2.5s;
 }
 
 .leg-4 {
   left: 70px;
   /* TODO #8: Add delay for leg 4 - try 3s */
-  /* animation-delay: 3s; */
+  animation-delay: 3s;
 }
 
 /* STEP 6: The color-changing animation */
@@ -127,17 +127,17 @@
 
   /* TODO #9: Add a color at 25% - try #e74c3c (red) */
   25% {
-    background-color: /* YOUR COLOR HERE */;
+    background-color: #e74c3c;
   }
 
   /* TODO #10: Add a color at 50% - try #f39c12 (orange) */
   50% {
-    background-color: /* YOUR COLOR HERE */;
+    background-color: #f39c12;
   }
 
   /* TODO #11: Add a color at 75% - try #3498db (blue) */
   75% {
-    background-color: /* YOUR COLOR HERE */;
+    background-color: #3498db;
   }
 
   100% {

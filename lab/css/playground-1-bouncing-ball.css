@@ -31,7 +31,7 @@
   box-shadow: 0 8px 20px rgba(255, 107, 107, 0.3);
 
   /* TODO #1: Uncomment the line below to apply the animation */
-  /* animation: bounce 2s ease-in-out infinite; */
+  animation: bounce 2s ease-out infinite;
 }
 
 /* STEP 2: Understanding @keyframes
@@ -56,7 +56,7 @@
   /* At the middle (50%), the ball is at the top */
   50% {
     /* TODO #2: Fill in the translateY value to move the ball up 100px */
-    transform: translateY(/* YOUR CODE HERE */);
+    transform: translateY(-100px);
   }
 
   /* At the end (100%), the ball returns to the bottom */

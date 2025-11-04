@@ -32,7 +32,7 @@
   position: relative;
 
   /* TODO #1: Add the pulsing glow animation */
-  /* animation: pulse-glow 2s ease-in-out infinite; */
+  animation: pulse-glow 2s ease-in-out infinite;
 
   /* Smooth transitions for hover effects */
   transition: all 0.3s ease;
@@ -44,8 +44,8 @@
   transform: scale(1.05);
 
   /* TODO #2: Add a stronger glow on hover */
-  /* box-shadow: 0 0 30px rgba(102, 126, 234, 0.8), 
-                   0 0 60px rgba(102, 126, 234, 0.4); */
+  box-shadow: 0 0 30px rgba(102, 126, 234, 0.8), 
+                 0 0 60px rgba(102, 126, 234, 0.4);
 }
 
 /* STEP 3: The pulsing glow animation */
@@ -55,7 +55,7 @@
       0 0 5px rgba(102, 126, 234, 0.3),
       0 0 10px rgba(102, 126, 234, 0.2);
     /* TODO #3: Set filter brightness to normal (try 1) */
-    filter: brightness(/* YOUR VALUE HERE */);
+    filter: brightness(1);
   }
 
   50% {
@@ -63,10 +63,10 @@
     box-shadow:
       0 0 20px rgba(102, 126, 234, 0.8),
       0 0 40px rgba(102, 126, 234, 0.4),
-      0 0 /* YOUR SIZE HERE */ px rgba(102, 126, 234, 0.2);
+      0 0 60px rgba(102, 126, 234, 0.2);
 
     /* TODO #5: Make it brighter with filter (try 1.2) */
-    filter: brightness(/* YOUR VALUE HERE */);
+    filter: brightness(1.2);
   }
 
   100% {
